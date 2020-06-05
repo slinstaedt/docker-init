@@ -15,5 +15,5 @@ services:
     image: kamalook/docker-init
     command:
       - echo hello
-	  - echo world
+	    - echo world
 ```
