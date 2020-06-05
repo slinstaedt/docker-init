@@ -11,7 +11,9 @@ for LINE in "$@"; do
 	else
 		printf 'RUNNING  %2d: %s\n' "$COUNT" "$LINE"
 		eval "$LINE" | tee $INIT_FILE || CODE=$?
-		test -n "${CODE+x}" && rm $INIT_FILE && exit $CODE
+		test -n "${CODE+x}" && echo "FAILED command $COUNT. Exiting." && rm $INIT_FILE && exit $CODE
 	fi
 	COUNT=$((COUNT+1))
 done
+
+echo "FINISHED all $COUNT commands. Exiting."
