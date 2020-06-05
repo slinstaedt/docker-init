@@ -16,4 +16,4 @@ for LINE in "$@"; do
 	COUNT=$((COUNT+1))
 done
 
-echo "FINISHED all $COUNT commands. Exiting."
+echo "FINISHED all $((COUNT-1)) commands. Exiting."
