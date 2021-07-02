@@ -3,7 +3,7 @@ This image is meant for running shell commands in docker containers only once. I
 
 ## Usage: directly via docker
 ```
-docker run kamalook/docker-init "echo hello" "echo world"
+docker run xertz/docker-init "echo hello" "echo world"
 ```
 
 ## Usage: via docker-compose
@@ -12,7 +12,7 @@ version: "3"
 
 services:
   init:
-    image: kamalook/docker-init
+    image: xertz/docker-init
     command:
       - echo hello
       - echo world
